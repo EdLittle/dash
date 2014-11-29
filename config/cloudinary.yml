@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: diclnll7x
+  api_key: '185493546992927'
+  api_secret: meSTHODpHy_pGNZwI5z9-0oIXkU
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: diclnll7x
+  api_key: '185493546992927'
+  api_secret: meSTHODpHy_pGNZwI5z9-0oIXkU
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: diclnll7x
+  api_key: '185493546992927'
+  api_secret: meSTHODpHy_pGNZwI5z9-0oIXkU
+  enhance_image_tag: true
+  static_image_support: false

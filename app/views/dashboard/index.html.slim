@@ -1,31 +1,28 @@
 img.hide.text-center.img-circle src="..."
 #carousel.container-fluid
-  .row
-    #pic-carousel.carousel.slide data-ride="carousel"
-      ol.carousel-indicators
-        li.active data-target="pic-carousel" data-slide-to="0"
-        li.active data-target="pic-carousel" data-slide-to="1"
-        li.active data-target="pic-carousel" data-slide-to="2"
-      .carousel-inner role="listbox"
-        .item.active
-          .text-center
-            = image_tag "552436_443771699013130_1082185882_n.jpg"
-          .carousel-caption
-            | ...
-        .item
-          .text-center
-            = image_tag "10751872_10153266677694325_962155587_n.jpg"
-          .carousel-caption
-            | ...
-        .item
-          .text-center
-            = image_tag "slide1.jpg"
-      a.left.carousel-control href="#pic-carousel" role="button" data-slide="prev"
-        span.fa.fa-chevron-left aria-hidden="true"
-        span.sr-only Previous
-      a.right.carousel-control href="#pic-carousel" role="button" data-slide="next"
-        span.fa.fa-chevron-right aria-hidden="true"
-        span.sr-only Next
+  #pic-carousel.carousel.slide data-ride="carousel"
+    ol.carousel-indicators
+      li.active data-target="#pic-carousel" data-slide-to="0"
+      li data-target="#pic-carousel" data-slide-to="1"
+      li data-target="#pic-carousel" data-slide-to="2"
+    .carousel-inner role="listbox"
+      .item.active
+        .text-center
+          = cl_image_tag 'carousel-1.jpg', crop: :fill, gravity: :face
+        .text-center.col-xs-12
+          = cl_image_tag 'carousel-1.jpg', crop: :fill, gravity: :face
+      .item
+        .text-center
+          = cl_image_tag 'carousel-2.jpg'
+      .item
+        .text-center
+          = cl_image_tag 'carousel-3.jpg'
+    a.left.carousel-control href="#pic-carousel" role="button" data-slide="prev"
+      span.fa.fa-chevron-left aria-hidden="true"
+      span.sr-only Previous
+    a.right.carousel-control href="#pic-carousel" role="button" data-slide="next"
+      span.fa.fa-chevron-right aria-hidden="true"
+      span.sr-only Next
 #social-media.container
   .row
     .social-media-badge.odd.text-center.col-md-2.col-sm-2.col-md-offset-2.col-sm-offset-2.col-xs-12
