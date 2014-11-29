@@ -1,39 +1,54 @@
-img.hide.text-center.img-circle src="..."
+img.hide.text-center.img-circle src='...'
 #carousel.container-fluid
-  #pic-carousel.carousel.slide data-ride="carousel"
+  #pic-carousel.row.carousel.slide data-ride='carousel'
     ol.carousel-indicators
-      li.active data-target="#pic-carousel" data-slide-to="0"
-      li data-target="#pic-carousel" data-slide-to="1"
-      li data-target="#pic-carousel" data-slide-to="2"
-    .carousel-inner role="listbox"
+      li.active data-target='#pic-carousel' data-slide-to='0'
+      li data-target='#pic-carousel' data-slide-to='1'
+      li data-target='#pic-carousel' data-slide-to='2'
+    .carousel-inner role='listbox'
       .item.active
-        .text-center
-          = cl_image_tag 'carousel-1.jpg', crop: :fill, gravity: :face
-        .text-center.col-xs-12
-          = cl_image_tag 'carousel-1.jpg', crop: :fill, gravity: :face
+        .row.text-center.visible-md.visible-lg
+          = cl_image_tag 'carousel-1.jpg', crop: :fill, gravity: :face, height: 640
+        .row.text-center.visible-sm
+          = cl_image_tag 'carousel-1.jpg', height: 500, crop: :fill, gravity: :face
+        .row.text-center.visible-xs.col-12-xs
+          = cl_image_tag 'carousel-1.jpg', height: 340, gravity: :face
+
       .item
-        .text-center
-          = cl_image_tag 'carousel-2.jpg'
+        .row.text-center.visible-md.visible-lg
+          = cl_image_tag 'carousel-2.jpg', height: 640, crop: :fill
+        .row.text-center.visible-sm
+          = cl_image_tag 'carousel-2.jpg', height: 500, crop: :fill, gravity: :face
+        .row.text-center.visible-xs.col-12-xs
+          = cl_image_tag 'carousel-2.jpg', height: 340, gravity: :face
+
+
       .item
-        .text-center
-          = cl_image_tag 'carousel-3.jpg'
-    a.left.carousel-control href="#pic-carousel" role="button" data-slide="prev"
-      span.fa.fa-chevron-left aria-hidden="true"
+        .row.text-center.visible-md.visible-lg
+          = cl_image_tag 'carousel-3.jpg', height: 640, crop: :fill
+        .row.text-center.visible-sm
+          = cl_image_tag 'carousel-3.jpg', height: 500, crop: :fill, gravity: :face
+        .row.text-center.visible-xs.col-12-xs
+          = cl_image_tag 'carousel-3.jpg', height: 340, gravity: :face
+
+    a.left.carousel-control href='#pic-carousel' role='button' data-slide='prev'
+      span.glyphicon.glyphicon-chevron-left aria-hidden='true'
       span.sr-only Previous
-    a.right.carousel-control href="#pic-carousel" role="button" data-slide="next"
-      span.fa.fa-chevron-right aria-hidden="true"
-      span.sr-only Next
+    a.right.carousel-control href='#pic-carousel' role='button' data-slide='next'
+      span.glyphicon.glyphicon-chevron-right aria-hidden='true'
+        span.sr-only Next
+
 #social-media.container
   .row
     .social-media-badge.odd.text-center.col-md-2.col-sm-2.col-md-offset-2.col-sm-offset-2.col-xs-12
-      a.v-center target="_blank" href="http://www.facebook.com"
+      a.v-center target='_blank' href='http://www.facebook.com'
         i.fa.fa-facebook
     .social-media-badge.even.text-center.col-md-2.col-sm-2.col-xs-12
-      a.v-center target="_blank" href="http://www.twitter.com"
+      a.v-center target='_blank' href='http://www.twitter.com'
         i.fa.fa-twitter
     .social-media-badge.odd.text-center.col-md-2.col-sm-2.col-xs-12
-      a.v-center target="_blank" href="http://www.instagram.com"
+      a.v-center target='_blank' href='http://www.instagram.com'
         i.fa.fa-instagram
     .social-media-badge.even.text-center.col-md-2.col-sm-2.col-xs-12
-      a.v-center target="_blank" href="http://www.youtube.com"
+      a.v-center target='_blank' href='http://www.youtube.com'
         i.fa.fa-youtube
